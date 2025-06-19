@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>이름</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- members: model 안에 members를 꺼내는 것 -->
+      <tr th:each="member : ${members}">
+        <!-- 프로퍼티 접근방식: getter/setter 접근하는 방식-->
+        <td th:text="${member.id}"></td>    <!-- -> getId에 접근하는 것임 -->
+        <td th:text="${member.name}"></td>  <!-- -> getName에 접근하는 것임 -->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div> <!-- /container -->
+</body>
+</html>
